@@ -1,0 +1,13 @@
+<li [ngStyle] = "{'background-color': getColorBouton()}"  [ngClass]="{'list-group-item': true}">               
+
+  <h4 [ngStyle] = "{'background-color': getColorBouton()}"  [ngStyle]="{color: getColorBouton()}"> {{ appareilName  }} 
+                                   {{ lastUpdate | date : 'dd/MM/yyyy h:mm a' | uppercase }} 
+  </h4>
+  <h5> {{ content }} </h5>
+  <div>
+    <h6> 
+     <input type="button"  class="btn btn-success" value="Pouce vert"  (click)="getPlus()" >
+     <input type="button" class="btn btn-danger" value="Pouce rouge"  (click)="getMoins()">
+    </h6>
+  </div>
+</li>
